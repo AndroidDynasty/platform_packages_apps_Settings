@@ -4,5 +4,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/system_interface_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    
+    <PreferenceScreen
+        android:id="@+id/halo"
+        android:fragment="com.android.settings.aospx.fragments.Halo"
+        android:title="@string/halo_title" />
 
 </PreferenceScreen>
