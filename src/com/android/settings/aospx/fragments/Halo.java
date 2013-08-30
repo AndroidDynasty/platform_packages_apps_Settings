@@ -83,7 +83,7 @@ public class Halo extends SettingsPreferenceFragment
         super.onCreate(savedInstanceState);
         mContext = getActivity();
 
-        addPreferencesFromResource(R.xml.settings_halo);
+        addPreferencesFromResource(R.xml.halo_settings);
 
         mNotificationManager = INotificationManager.Stub.asInterface(
                 ServiceManager.getService(Context.NOTIFICATION_SERVICE));
