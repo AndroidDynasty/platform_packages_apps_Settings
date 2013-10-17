@@ -4535,4 +4535,14 @@
 
     <!-- Text to display in regulatory info screen (from device overlay). -->
     <string name="regulatory_info_text"></string>
+    
+    <!-- AOSPX SETTINGS BEGIN -->
+
+    <!-- Settings main menu category heading -->
+    <string name="header_category_interface">CUSTOMIZATION</string>
+    <!-- System Interface settings  -->
+    <string name="system_settings_title">AOSPX Mods</string>
+    <string name="system_interface_title">AOSPX Mods</string>
+
+    <!-- AOSPX SETTINGS END -->
 </resources>

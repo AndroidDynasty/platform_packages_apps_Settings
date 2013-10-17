@@ -20,7 +20,7 @@
 
     <!-- WIRELESS and NETWORKS -->
     <header android:id="@+id/wireless_section"
-        android:title="@string/header_category_wireless_networks" />
+            android:title="@string/header_category_wireless_networks" />
 
     <!-- Wifi -->
     <header
@@ -60,7 +60,7 @@
 
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
-        android:title="@string/header_category_device" />
+            android:title="@string/header_category_device" />
 
     <!-- Sound -->
     <header
@@ -114,7 +114,7 @@
 
     <!-- PERSONAL -->
     <header android:id="@+id/personal_section"
-        android:title="@string/header_category_personal" />
+            android:title="@string/header_category_personal" />
 
     <!-- Location -->
     <header
@@ -146,8 +146,8 @@
 
     <!--  ACCOUNTS section -->
     <header
-            android:id="@+id/account_settings"
-            android:title="@string/account_settings" />
+        android:id="@+id/account_settings"
+        android:title="@string/account_settings" />
 
     <header
             android:id="@+id/account_add"
@@ -156,10 +156,22 @@
         <intent
             android:action="android.settings.ADD_ACCOUNT_SETTINGS"/>
     </header>
+    
+    <!-- AOSPX SETTINGS START -->
+    <header
+        android:title="@string/header_category_interface" />
+
+    <!-- Aospx -->
+    <header
+        android:id="@+id/aospx_settings"
+        android:icon="@drawable/ic_settings_aospx"
+        android:fragment="com.android.settings.aospx.AospxSettings"
+        android:title="@string/system_settings_title" />
+    <!-- AOSPX SETTINGS END -->
 
     <!-- SYSTEM -->
     <header android:id="@+id/system_section"
-        android:title="@string/header_category_system" />
+            android:title="@string/header_category_system" />
 
     <!-- Date & Time -->
     <header

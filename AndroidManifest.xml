@@ -1579,6 +1579,10 @@
             </intent-filter>
         </activity>
 
+        <!-- AOSPX SETTINGS START -->
+        <activity android:name=".aospx.AospxSettings" />
+        <!-- AOSPX SETTINGS END -->
+
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
                 android:exported="false"
