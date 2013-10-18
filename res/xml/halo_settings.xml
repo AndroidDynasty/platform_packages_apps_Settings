@@ -101,12 +101,6 @@
             android:entries="@array/entries_halo_size"
             android:entryValues="@array/values_halo_size" />
 
-        <CheckBoxPreference
-            android:key="show_popup"
-            android:title="@string/popups_title"
-            android:summary="@string/popups_summary"
-            android:defaultValue="true" />
-
     </PreferenceCategory>
 
     <PreferenceCategory
