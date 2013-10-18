@@ -18,6 +18,7 @@ package com.android.settings;
 
 import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
 
+import android.content.res.Resources;
 import android.app.ActivityManagerNative;
 import android.app.Dialog;
 import android.app.admin.DevicePolicyManager;
@@ -77,6 +78,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
     private WifiDisplayStatus mWifiDisplayStatus;
     private Preference mWifiDisplayPreference;
+    
+    private ListPreference mExpandedDesktopPref;
+    
+    PreferenceScreen prefSet = getPreferenceScreen();
 
     private final RotationPolicy.RotationPolicyListener mRotationPolicyListener =
             new RotationPolicy.RotationPolicyListener() {
@@ -115,6 +120,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mScreenTimeoutPreference.setOnPreferenceChangeListener(this);
         disableUnusableTimeouts(mScreenTimeoutPreference);
         updateTimeoutPreferenceDescription(currentTimeout);
+        
+        mExpandedDesktopPref = (ListPreference) prefSet.findPreference(KEY_EXPANDED_DESKTOP);
+        mExpandedDesktopPref.setOnPreferenceChangeListener(this);
+        int expandedDesktopValue = Settings.System.getInt(getContentResolver(),
+                        Settings.System.EXPANDED_DESKTOP_MODE, 0);
+        mExpandedDesktopPref.setValue(String.valueOf(expandedDesktopValue));
+        mExpandedDesktopPref.setSummary(mExpandedDesktopPref.getEntries()[expandedDesktopValue]);
 
         mFontSizePref = (WarnedListPreference) findPreference(KEY_FONT_SIZE);
         mFontSizePref.setOnPreferenceChangeListener(this);
@@ -324,6 +336,25 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         } catch (RemoteException e) {
             Log.w(TAG, "Unable to save font size");
         }
+    }
+    
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mExpandedDesktopPref) {
+            int expandedDesktopValue = Integer.valueOf((String) newValue);
+            int index = mExpandedDesktopPref.findIndexOfValue((String) newValue);
+            if (expandedDesktopValue == 0) {
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 0);
+            } else {
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 1);
+            }
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.EXPANDED_DESKTOP_MODE, expandedDesktopValue);
+            mExpandedDesktopPref.setSummary(mExpandedDesktopPref.getEntries()[index]);
+            return true;
+        }
+        return false;
     }
 
     @Override
