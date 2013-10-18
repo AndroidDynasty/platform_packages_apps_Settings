@@ -8,6 +8,7 @@
     <PreferenceScreen
         android:id="@+id/halo"
         android:fragment="com.android.settings.aospx.fragments.Halo"
+        android:icon="@drawable/ic_settings_halo"
         android:title="@string/halo_title" />
 
 </PreferenceScreen>
