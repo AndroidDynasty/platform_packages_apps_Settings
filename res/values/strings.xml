@@ -4622,6 +4622,10 @@
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Set</string>
+    
+    <!-- About phone screen,  setting option name-->
+    <string name="aospx_version">AOSPX Version</string>
+    <string name="aospx_version_default">Unknown</string>
 
     <!-- AOSPX SETTINGS END -->
 </resources>
