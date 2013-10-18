@@ -4622,14 +4622,6 @@
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Set</string>
-    
-    <!-- Expanded Desktop -->
-    <string name="summary_expanded_desktop">%1$s</string>
-    <string name="expanded_desktop_summary">Show or change expanded desktop mode</string>
-    <string name="expanded_desktop_disabled">Off</string>
-    <string name="expanded_desktop_only_nav_bar">Hide navigation bar</string>
-    <string name="expanded_desktop_only_status_bar">Hide status bar</string>
-    <string name="expanded_desktop_both_hidden">Hide navigation and status bar</string>
 
     <!-- AOSPX SETTINGS END -->
 </resources>
