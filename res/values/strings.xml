@@ -4549,6 +4549,10 @@
     <!-- Hostname setting -->
     <string name="device_hostname">Device hostname</string>
     
+    <!-- About phone screen,  setting option name-->
+    <string name="mod_version">Aospx Version</string>
+    <string name="mod_version_default">Unknown</string>
+    
     <!-- HALO -->
     <string name="halo_title">Halo</string>
     <string name="halo_category">HALO</string>
