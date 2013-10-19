@@ -4550,7 +4550,7 @@
     <string name="device_hostname">Device hostname</string>
     
     <!-- About phone screen,  setting option name-->
-    <string name="mod_version">Aospx Version</string>
+    <string name="mod_version">Aospx version</string>
     <string name="mod_version_default">Unknown</string>
     
     <!-- HALO -->
@@ -4626,6 +4626,10 @@
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Set</string>
+    
+    <!-- About phone screen, build date of ROM -->
+    <string name="build_date">Build date</string>
+    <string name="build_date_default">2012-01-01-0000</string>
 
     <!-- AOSPX SETTINGS END -->
 </resources>
